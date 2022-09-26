@@ -17,7 +17,7 @@
     </head>
 
     <body>
-      <script src="Javascripts/sidebars.js"></script>
+      <!-- <script src="Javascripts/sidebars.js"></script> -->
       <!-- Sidebar -->
       <div class="sidebar">
         <div class="logo_content">
@@ -29,11 +29,9 @@
         </div>
         <ul class="nav-list">
           <li>
-            <a href="#">
+        
               <i class='bx bx-search'></i>
              <input type="text" placeholder="Search....">
-            </a>
-             <span class="tooltip">Mema</span>
           </li>
           <li>
             <a href="#">
@@ -81,9 +79,22 @@
 
     <div class="home_content">
       <div class="text"> Map here</div>
-
     </div>
+     <script>
+      let button = document.querySelector("#btn");
+      let sideBar = document.querySelector(".sidebar");
+      let searchBtn = document.querySelector(".bx-search");
     
+      button.onclick = function(){
+        button.classList.toggle("active");
+            } 
+      sideBar.onclick = function(){
+        sideBar.classList.toggle("active");
+            } 
+      searchBtn.onclick = function(){
+        searchBtn.classList.toggle("active");
+            } 
+     </script>
 
     </body>
 </html>
