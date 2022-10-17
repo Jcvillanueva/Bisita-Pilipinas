@@ -254,3 +254,31 @@
     display: none;
   }
 }
+
+.fakeimg {
+  height: 200px;
+  background: #aaa;
+}
+
+.home-section{
+  padding-left: 25px;
+  padding-top: 10px;
+}
+.home-section .col-sm-8{
+  margin: 25px 50px 75px ;
+  margin-right: 10%;
+  position: absolute;
+}
+
+.col-sm-8 #accordion{
+  margin: 10px;
+  margin-right: 100%;
+  width: 900px;
+}
+.col-sm-8 #accordion li{
+  list-style: none;
+  width: 100%;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.425);
+  padding: 10px;
+}

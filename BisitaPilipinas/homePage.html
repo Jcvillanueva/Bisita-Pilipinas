@@ -67,29 +67,42 @@
       </div>
       <section class="home-section">
         
-        <!-- <div class="card">
-          <div class="card-image"></div>
-            <div class="card-description">
-              <p class="text-title"> Card Title</p>
-              <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-            </div>
-          </div> -->
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Accordion Item #1
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        <div class="col-sm-8">
+          <h2>TITLE HEADING</h2>
+          <h5>Title description, Dec 7, 2020</h5>
+          <div class="fakeimg">Fake Image</div>
+          <p>Some text..</p>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+          <ul id="accordion">
+            <li>
+              <label for ="first"> More Details</label>
+              <input type="radio" name ="accordion" id="first" checked>
+              <div class="content">
+                <p>The house is blah blah blah </p>
               </div>
-            </div>
-          </div>
+            </li>
+
+            <li>
+              <label for="second"> Location</label>
+              <input type="radio" name="accordion" id="second">
+              <div class ="content">
+                <p>the location of the house is nearby blah blahh blahhh </p>                
+              </div>
+            </li>
+
+            <li>
+              <label for="second"> Ratings</label>
+              <input type="radio" name="accordion" id="second">
+              <div class ="content">
+                <p>this is the ratings</p>                
+              </div>
+            </li>
+          </ul>  
         </div>
-        </div>
+      </div>
+    </div>
       </section>
+
       <script>
       let sidebar = document.querySelector(".sidebar");
       let closeBtn = document.querySelector("#btn");
