@@ -270,15 +270,11 @@
   position: absolute;
 }
 
-.col-sm-8 #accordion{
-  margin: 10px;
-  margin-right: 100%;
-  width: 900px;
-}
-.col-sm-8 #accordion li{
+.col-sm-8 #accordionExample{
   list-style: none;
   width: 100%;
   margin-bottom: 10px;
   background: rgba(255, 255, 255, 0.425);
   padding: 10px;
 }
+
