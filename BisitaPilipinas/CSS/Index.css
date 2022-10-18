@@ -270,7 +270,15 @@
   position: absolute;
 }
 
-.col-sm-8 #accordionExample{
+.col-sm-8 #accordionExample1{
+  list-style: none;
+  width: 100%;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.425);
+  padding: 10px;
+}
+
+.col-sm-8 .house2 #accordionExample2{
   list-style: none;
   width: 100%;
   margin-bottom: 10px;
