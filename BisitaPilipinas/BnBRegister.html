@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
       <link rel="stylesheet" href="CSS/Index.css">
       <link rel="stylesheet" href="CSS/headers.css">
-      <link rel="stylesheet" href="CSS/card.css">
       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
       <!-- <link rel="stylesheet" href="CSS/sidebars.css"> -->
       <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sidebars/">
@@ -14,7 +14,7 @@
       <!-- Javascripts -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
       <!-- Javascripts end -->
-     <title> Bisita Carranglan Tourist</title>
+     <title> Bisita Carranglan Owner register</title>
     </head>
 
     <body>
@@ -53,21 +53,36 @@
            </a>
            <span class="tooltip">Messages</span>
          </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-pie-chart-alt-2' ></i>
+             <span class="links_name">Ratings</span>
+           </a>
+           <span class="tooltip">Ratings</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-building-house' ></i>
+             <span class="links_name">Your BnB</span>
+           </a>
+           <span class="tooltip">List of your BnB</span>
+         </li>
+         
          <li class="profile">
              <div class="profile-details">
                <!--<img src="profile.jpg" alt="profileImg">-->
                <div class="name_job">
-                 <div class="name">Tourist1</div>
-                 <div class="job">Tourist</div>
+                 <div class="name">Owner1</div>
+                 <div class="job">BnB Owner</div>
                </div>
              </div>
              <i class='bx bx-log-out' id="log_out" ></i>
          </li>
         </ul>
       </div>
-      <!-- Home-section -->
       <section class="home-section">
-        <div class="col-sm-8">
+          <div class="text">Registered BnB</div>
+          <div class="col-sm-8">
           <!-- House #1 -->
           <h2>House 1</h2>
           <h5>House Description</h5>
@@ -115,62 +130,8 @@
           </div>
           <!-- First Accordion House End -->
            <!-- House #1 End -->
-          <br>
-          <br>
-          <br>
-           <!-- House #2 -->
-           <div class="house2">  
-            <h2>House 2</h2>
-            <h5>House Description</h5>
-            <div class="fakeimg">House Pictures here</div>
-            <p>Description here</p>
-            <p>Location Itsura ng bahay or kahhit andito basta details ng bahay anditoo</p>
-            <!-- Second House accordion -->
-            <div class="accordion" role="tab" id="accordionExample2">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    More details
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Location
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Ratings 
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Second House accordion -->
-            <!-- House #2 end --> 
-        </div> 
-    </div>
-    </section>
-    <!-- Home-section end -->
-
+          </div>
+      </section>
       <script>
       let sidebar = document.querySelector(".sidebar");
       let closeBtn = document.querySelector("#btn");
