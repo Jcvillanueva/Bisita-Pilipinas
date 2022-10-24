@@ -1,0 +1,12 @@
+
+#accordion{
+    margin: 100% auto;
+    width: 600px;
+}
+#accordion li{
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.425);
+    padding: 10px;
+}
