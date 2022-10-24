@@ -16,11 +16,14 @@
                 $data = $stmt_result->fetch_assoc();
                 if($data['password'] === $hashed_password) {
                     //$_SESSION['id'] = $data['PK'];
-                    if($data['user_type']==='Admin'){
+                    if($data['user_type']==='Tourist'){
                         header("Location: homepage.html");
-                    }else if($data['user_type']===''){
+                    } else if($data['user_type']==='Owner'){
                         header("Location: homepage.html");
-                    } else {
+                    } else if($data['user_type']==='Admin'){
+                        header("Location: homepage.html");
+                    } 
+                    else {
                     header("Location: index.php?error=Invalid username or password!");
                     }
                 exit();

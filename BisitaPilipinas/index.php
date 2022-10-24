@@ -8,7 +8,7 @@
   </head>
  
   <body>
-<section class="vh-100" style="background-color: #11101d;">
+<section class="vh-100" style="background-color: #508bfc;">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -42,15 +42,16 @@
                 <label class="form-check-label" for="form1Example3"> Remember password </label>
               </div>
   
-              <button onclick="myFunction2()" class="btn btn-primary btn-lg btn-block" type="submit">Sign-up</button>
-  
+              <button onclick="myFunction2()" class="btn btn-primary btn-lg btn-block" type="submit">Sign-up</button><br>
+
               <hr class="my-4">
+
+              <button onclick="myFunction3()" class="btn btn-primary btn-lg btn-block" type="submit-owner">Sign-up as BnB Owner</button>
+
+              <hr class="my-4">
+
               <button onclick="myFunction()">Continue without an Account</button>
-              <hr class="my-4">
-  
-              <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"
-                type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button>
-              
+
             </div>
           </div>
         </div>
@@ -70,11 +71,12 @@
   }
   </script>
 
-<!-- MDB -->
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
-></script>
+<script>
+  function myFunction3() {
+    location.replace("ownerSignUp.html")
+  }
+  </script>
+
 
   </body>
 </html>
