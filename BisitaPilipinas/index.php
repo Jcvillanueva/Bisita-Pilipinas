@@ -61,7 +61,7 @@
 
   <script>
     function myFunction() {
-      location.replace("homepage.html")
+      location.replace("homepage.php")
     }
     </script>
 

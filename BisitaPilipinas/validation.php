@@ -15,15 +15,15 @@
             if($stmt_result->num_rows > 0) {
                 $data = $stmt_result->fetch_assoc();
                 if($data['password'] === $hashed_password) {
-                    //$_SESSION['id'] = $data['PK'];
-                    if($data['user_type']==='Tourist'){
-                        header("Location: homepage.html");
-                    } else if($data['user_type']==='Owner'){
-                        header("Location: homepage.html");
-                    } else if($data['user_type']==='Admin'){
-                        header("Location: homepage.html");
-                    } 
-                    else {
+                    $_SESSION['id'] = $data['id'];
+                    $_SESSION['username'] = $data['username'];
+                    $_SESSION['email'] = $data['email'];
+                    $_SESSION['usertype'] = $data['usertype'];
+                    if($data['usertype']==='Admin'){
+                        header("Location: AdminBnB.php");
+                    }else if($data['usertype']==='Tourist'){
+                        header("Location: homepage.php");
+                    } else {
                     header("Location: index.php?error=Invalid username or password!");
                     }
                 exit();

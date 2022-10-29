@@ -10,16 +10,16 @@
 			$hashed_password = md5($_POST['password']);
 			$sql = "
 				INSERT INTO users (
-					usertype,
 					username, 
 					email, 
-					password
+					password,
+					usertype
 				)
 				VALUES (
-					'{$_POST['usertype']}',
-					'{$_POST['username']}',
+					'{$_POST['username']}', 
 					'{$_POST['email']}', 
-					'{$hashed_password}'
+					'{$hashed_password}',
+					'{$_POST['usertype']}'
 				)
 			";
 
