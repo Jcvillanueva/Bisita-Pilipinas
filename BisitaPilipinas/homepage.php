@@ -66,26 +66,40 @@
         </ul>
       </div>
       <!-- Home-section -->
+
+      <?php require ('config.php'); 
+          $conn = new mysqli($servername, $username, $password, $dbname);
+          if (!$conn){
+            die("Connection failed:" . mysqli_connect_error());
+          }
+
+          $sql = "SELECT * FROM users_owner";
+          $result = mysqli_query($conn, $sql);
+          
+          $BnbHouse = mysqli_fetch_assoc($result);
+          mysqli_free_result($result);
+          mysqli_close($conn);
+        ?>
       <section class="home-section">
         <div class="col-sm-8">
           <!-- House #1 -->
-          <h2>House 1</h2>
-          <h5>House Description</h5>
+          <h2><?php echo $BnbHouse['owner_bnb_name']?></h2>
+          <h5><?php echo $BnbHouse['owner_username']?></h5>
           <div class="fakeimg">House Pictures here</div>
           <br>
-          <h5>Description here</h5>
-          <p>Location Itsura ng bahay or kahit andito basta details ng bahay anditoo</p>
+          <h5>Description</h5>
+          <p><?php echo $BnbHouse['owner_bnb_desc']?></p>
           <!-- First Accordion house -->
           <div class="accordion" id="accordionExample1">
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  More details
+                  Contact Details
                 </button>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>Additional details dito ng BNB makikita yun sa nilagay mo sa pag book ng bnb nilaa so pakilagay nalang siya Dito</strong> 
+                  <p><strong>Contact Details:</strong><?php echo $BnbHouse['owner_contact_num']?></p>
                 </div>
               </div>
             </div>
@@ -97,19 +111,19 @@
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>So dito naman ang location ng bahay kahit naka embedded lang yung map oks na yun</strong> 
+                  <p><strong>Location</strong> <?php echo $BnbHouse['owner_bnb_address']?></p> 
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Ratings 
+                  Price range 
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>in progress pa ren to pero magagawa ko na to agaad in no time</strong>
+                  <p><strong>Pricing from</strong> <?php echo $BnbHouse['price_range_from']?> to <?php echo $BnbHouse['price_range_to']?></p>
                 </div>
               </div>
             </div>
@@ -119,7 +133,7 @@
           <br>
           <br>
           <br>
-            <div class="pagination_section">
+            <!-- <div class="pagination_section">
               <nav aria-label="...">
                 <ul class="pagination">          
                     <a class="page-link" href="homepage.html" tabindex="-1" aria-disabled="false">Previous</a>
@@ -135,7 +149,8 @@
                 </ul>
               </nav>
              </div>
-          </div> 
+          </div>  -->
+          <a href="Tourbooking.php" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Book Now</a>
         </div> 
     </div>
     </section>
