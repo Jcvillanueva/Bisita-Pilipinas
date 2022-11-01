@@ -2,6 +2,24 @@
 
 	if (isset($_POST['submit'])) {
 		// Database connection
+		$owner_valid_id = file_get_contents($_FILES['owner_valid_id']['tmp_name']);
+		file_put_contents('images/'.$_FILES['owner_valid_id']['name'], $owner_valid_id);
+
+		$owner_bnb_image = file_get_contents($_FILES['owner_bnb_image']['tmp_name']);
+		file_put_contents('images/'.$_FILES['owner_bnb_image']['name'], $owner_bnb_image);
+
+		$owner_bnb_image2 = file_get_contents($_FILES['owner_bnb_image2']['tmp_name']);
+		file_put_contents('images/'.$_FILES['owner_bnb_image2']['name'], $owner_bnb_image2);
+
+		$owner_bnb_image3 = file_get_contents($_FILES['owner_bnb_image3']['tmp_name']);
+		file_put_contents('images/'.$_FILES['owner_bnb_image3']['name'], $owner_bnb_image3);
+
+		$owner_bnb_image4 = file_get_contents($_FILES['owner_bnb_image4']['tmp_name']);
+		file_put_contents('images/'.$_FILES['owner_bnb_image4']['name'], $owner_bnb_image4);
+
+		$owner_bnb_image5 = file_get_contents($_FILES['owner_bnb_image5']['tmp_name']);
+		file_put_contents('images/'.$_FILES['owner_bnb_image5']['name'], $owner_bnb_image5);
+
 		$conn = new mysqli('localhost','root','','bisita_pilipinas');
 		if ($conn->connect_error) {
 			echo "$conn->connect_error";
@@ -25,8 +43,7 @@
 					owner_bnb_image2,
 					owner_bnb_image3,
 					owner_bnb_image4,
-					owner_bnb_image5,
-					owner_bnb_image6
+					owner_bnb_image5
 				)
 				VALUES (
 					
@@ -40,19 +57,18 @@
 					'{$_POST['owner_contact_num']}',
 					'{$_POST['price_range_from']}',
 					'{$_POST['price_range_to']}',
-					'{$_POST['owner_valid_id']}',
-					'{$_POST['owner_bnb_image']}',
-					'{$_POST['owner_bnb_image2']}',
-					'{$_POST['owner_bnb_image3']}',
-					'{$_POST['owner_bnb_image4']}',
-					'{$_POST['owner_bnb_image5']}',
-					'{$_POST['owner_bnb_image6']}'
-		
+					'{$_FILES['owner_valid_id']['name']}',
+					'{$_FILES['owner_bnb_image']['name']}',
+					'{$_FILES['owner_bnb_image2']['name']}',
+					'{$_FILES['owner_bnb_image3']['name']}',
+					'{$_FILES['owner_bnb_image4']['name']}',
+					'{$_FILES['owner_bnb_image5']['name']}'
+
 				)
 			";
 
 			if ($conn->query($sql)) {
-				echo "Registration of your Bnb is successful, please wait for the validation of your registration by the admin. Thank you";
+				echo "Registration of your BnB is successful, please wait for the validation of your registration by the admin. Thank you";
 				echo '<form method="POST" action="index.php">
     					<input type="submit", value="Click here to login."/>
  						 </form>';

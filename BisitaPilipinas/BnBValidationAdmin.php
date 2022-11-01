@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet"/>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">  
       <link rel="stylesheet" href="CSS/Index.css">
       <link rel="stylesheet" href="CSS/headers.css">
@@ -42,13 +46,7 @@
            </a>
            <span class="tooltip">List of Registered BnB</span>
          </li>
-         <li>
-           <a href="#">
-             <i class='bx bx-chat' ></i>
-             <span class="links_name">Messages</span>
-           </a>
-           <span class="tooltip">Messages</span>
-         </li>
+
          <li>
            <a href="#">
              <i class='bx bx-pie-chart-alt-2' ></i>
@@ -77,8 +75,96 @@
         </ul>
       </div>
       <section class="home-section">
-        <h1>Dashboard</h1>
+        <h1>BnB Owner Applications</h1>
+
+        <?php require ('config.php');
+        
+        $conn = new mysqli($servername, $username, $password, $dbname);
+                // Check connection
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+
+            $sql = "SELECT * FROM users_owner";
+            $result = mysqli_query($conn, $sql);
+
+            if (mysqli_num_rows($result) > 0) {
+                // output data of each row
+            echo "<table border = 2 ";
+            echo "<thead>";
+                echo"<tr>
+                <th> Owner ID </th>
+                <th> Fullname </th>
+                <th> Username </th>
+                <th> Email </th>
+                <th> BnB Name </th>
+                <th> BnB Address </th>
+                <th> BnB Description </th>
+                <th> Contact No. </th>
+                <th> Price Range From </th>
+                <th> Price Range To </th>
+            
+                </tr>";
+                
+            
+                while($row = mysqli_fetch_assoc($result)) {
+            ?>
+                    <tr>
+                      
+                      <td>
+                        <a href="detail_view.php?id=<?php echo $row['owner_id']?>"><?php echo $row['owner_id']?></a>
+                      </td>
+
+                    <td> 
+                      <a href="detail_view.php?id=<?php echo $row['owner_id']?>"><?php echo $row['owner_fullname']?></a>
+                    </td> 
+              
+                    <td> 
+                    <?php echo $row['owner_username']?>
+                    </td>
+                  
+                    <td> 
+                    <?php echo $row['owner_email']?>
+                    </td>
+                  
+                    <td> 
+                    <?php echo $row['owner_bnb_name']?>
+                    </td>
+                  
+                    <td> 
+                    <?php echo $row['owner_bnb_address']?>
+                    </td>
+                    
+                    <td> 
+                    <?php echo $row['owner_bnb_desc']?>
+                    </td>
+                    
+                    <td> 
+                    <?php echo $row['owner_contact_num']?>
+                   </td>
+                    
+                    <td> 
+                    <?php echo $row['price_range_from']?>
+                    </td>
+                    
+                    <td>
+                    <?php echo $row['price_range_to']?>
+                    </td>
+          
+          
+                    </tr>
+                    </div>
+                    
+              <?php
+              
+                }
+            }
+        ?>
+
       </section>
+
+    
+
       <script>
       let sidebar = document.querySelector(".sidebar");
       let closeBtn = document.querySelector("#btn");
@@ -106,5 +192,11 @@
      <!-- Javascripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- Javascripts end -->
+
+        <!-- MDB -->
+        <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
+        ></script>
     </body>
 </html>
