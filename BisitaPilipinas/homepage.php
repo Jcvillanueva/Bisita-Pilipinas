@@ -79,15 +79,13 @@
           $BnbHouse = mysqli_fetch_assoc($result);
           mysqli_free_result($result);
           mysqli_close($conn);
-        ?>   
-         <section class="home-section">
+        ?>
+      <section class="home-section">
         <div class="col-sm-8">
           <!-- House #1 -->
           <h2><?php echo $BnbHouse['owner_bnb_name']?></h2>
-          <h5>Owned By: <br> <?php echo $BnbHouse['owner_fullname']?></h5>
-          <div class="fakeimg">
-            <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($BnbHouse['owner_bnb_image'])?>">
-          </div>
+          <h5><?php echo $BnbHouse['owner_username']?></h5>
+          <div class="fakeimg">House Pictures here</div>
           <br>
           <h5>Description</h5>
           <p><?php echo $BnbHouse['owner_bnb_desc']?></p>
