@@ -20,12 +20,12 @@
             <form method="POST" action="validation.php"> 
               
               <div class="form-outline mb-4">
-                <input type="username" id="username" class="form-control form-control-lg" name="username" />
+                <input type="username" id="username" class="form-control form-control-lg" name="username" required />
                 <label class="form-label" for="username">Username</label>
               </div>
   
               <div class="form-outline mb-4">
-                <input type="password" id="password" class="form-control form-control-lg" name="password" />
+                <input type="password" id="password" class="form-control form-control-lg" name="password" required/>
                 <label class="form-label" for="password">Password</label>
                   <?php if (isset($_GET['error'])){ ?>
                    <p class="error"><?php echo $_GET['error']; ?></p>
@@ -37,10 +37,10 @@
               </form>
 
               <!-- Checkbox -->
-              <div class="form-check d-flex justify-content-start mb-4">
+              <!-- <div class="form-check d-flex justify-content-start mb-4">
                 <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
                 <label class="form-check-label" for="form1Example3"> Remember password </label>
-              </div>
+              </div> --> <br>
   
               <button onclick="myFunction2()" class="btn btn-primary btn-lg btn-block" type="submit">Sign-up</button><br>
 

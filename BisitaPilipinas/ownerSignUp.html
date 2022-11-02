@@ -32,7 +32,7 @@
                           <h6 class="mb-0">Full Name:</h6>
                         </div>
                         <div class="col-md-9 pe-5">
-                          <input type="text" class="form-control form-control-lg" placeholder="Juan Dela Cruz" id="owner_fullname" name="owner_fullname" />
+                          <input type="text" class="form-control form-control-lg" placeholder="Juan Dela Cruz" id="owner_fullname" name="owner_fullname" required/>
                         </div>
                       </div>
     
@@ -43,7 +43,7 @@
                       <h6 class="mb-0">Username:</h6>
                     </div>
                     <div class="col-md-9 pe-5">
-                      <input type="text" class="form-control form-control-lg" placeholder="Abcd_1234" id="owner_username" name="owner_username" />
+                      <input type="text" class="form-control form-control-lg" placeholder="Abcd_1234" id="owner_username" name="owner_username" required/>
                     </div>
                   </div>
 
@@ -54,7 +54,7 @@
                           <h6 class="mb-0">Password:</h6>
                         </div>
                         <div class="col-md-9 pe-5">          
-                          <input type="password" class="form-control form-control-lg" placeholder="************" id="password" name="password"/>          
+                          <input type="password" class="form-control form-control-lg" placeholder="************" id="password" name="password" required/>          
                         </div>
                       </div>
       
@@ -65,7 +65,7 @@
                       <h6 class="mb-0">Email:</h6>     
                     </div>
                     <div class="col-md-9 pe-5">      
-                      <input type="email" class="form-control form-control-lg" placeholder="example@example.com" id="owner_email" name="owner_email" />      
+                      <input type="email" class="form-control form-control-lg" placeholder="example@example.com" id="owner_email" name="owner_email" required/>      
                     </div>
                   </div>
       
@@ -77,7 +77,7 @@
      
                     </div>
                     <div class="col-md-9 pe-5">
-                      <input type="text" class="form-control form-control-lg" placeholder="A Juanderful House" id="owner_bnb_name" name="owner_bnb_name" />
+                      <input type="text" class="form-control form-control-lg" placeholder="A Juanderful House" id="owner_bnb_name" name="owner_bnb_name"  required/>
                     </div>
                   </div>
 
@@ -88,7 +88,7 @@
                       <h6 class="mb-0">BnB Address:</h6>
                     </div>
                     <div class="col-md-9 pe-5">
-                      <input type="text" class="form-control form-control-lg" placeholder="Blk#/Lot#/Street/Village/City/Zip" id="owner_bnb_address" name="owner_bnb_address" />
+                      <input type="text" class="form-control form-control-lg" placeholder="Blk#/Lot#/Street/Village/City/Zip" id="owner_bnb_address" name="owner_bnb_address" required/>
                     </div>
                   </div>
 
@@ -99,7 +99,7 @@
                       <h6 class="mb-0">BnB Description:</h6>
                     </div>
                     <div class="col-md-9 pe-5">
-                      <textarea class="form-control" rows="3" placeholder="Input here your business' description." id="owner_bnb_desc" name="owner_bnb_desc"></textarea>
+                      <textarea required class="form-control" rows="3" placeholder="Input here your business' description." id="owner_bnb_desc" name="owner_bnb_desc"> </textarea>
                     </div>
                   </div>
 
@@ -110,7 +110,7 @@
                       <h6 class="mb-0">Contact No.:</h6>
                     </div>
                     <div class="col-md-9 pe-5">
-                      <input type="text" class="form-control form-control-lg" placeholder="09XXXXXXXXX" id="owner_contact_num" name="owner_contact_num"/>
+                      <input type="text" class="form-control form-control-lg" placeholder="09XXXXXXXXX" id="owner_contact_num" name="owner_contact_num" required/>
                     </div>
                   </div>
 
@@ -121,8 +121,8 @@
                       <h6 class="mb-0">Price Range:</h6>
                     </div>
                     <div class="col-md-9 pe-5">
-                      From:<input type="number" class="form-control form-control-lg" placeholder="0000" id="price_range_from" name="price_range_from"/>
-                      To:<input type="number" class="form-control form-control-lg" placeholder="0000" id="price_range_to" name="price_range_to"/>
+                      From:<input type="number" class="form-control form-control-lg" placeholder="0000" id="price_range_from" name="price_range_from" required/>
+                      To:<input type="number" class="form-control form-control-lg" placeholder="0000" id="price_range_to" name="price_range_to" required/>
                     </div>
                   </div>
       
@@ -136,7 +136,7 @@
                     </div>
                     <div class="col-md-9 pe-5">
       
-                      <input class="form-control form-control-lg" id="formFileLg" type="file" id="owner_valid_id" name="owner_valid_id" />
+                      <input class="form-control form-control-lg" id="formFileLg" type="file" id="owner_valid_id" name="owner_valid_id" required />
                       <div class="small text-muted mt-2">Upload any valid ID to prove legitimacy.</div>
       
                     </div>
@@ -151,11 +151,11 @@
       
                     </div>
                     <div class="col-md-9 pe-5">
-                      <input class="form-control form-control-lg" id="formFileLg" type="file" id="owner_bnb_image" name="owner_bnb_image" />
-                      <input class="form-control form-control-lg" id="formFileLg2" type="file" id="owner_bnb_image2" name="owner_bnb_image2" />
-                      <input class="form-control form-control-lg" id="formFileLg3" type="file" id="owner_bnb_image3" name="owner_bnb_image3" />
-                      <input class="form-control form-control-lg" id="formFileLg4" type="file" id="owner_bnb_image4" name="owner_bnb_image4" />
-                      <input class="form-control form-control-lg" id="formFileLg5" type="file" id="owner_bnb_image5" name="owner_bnb_image5" />
+                      <input class="form-control form-control-lg" id="formFileLg" type="file" id="owner_bnb_image" name="owner_bnb_image" required />
+                      <input class="form-control form-control-lg" id="formFileLg2" type="file" id="owner_bnb_image2" name="owner_bnb_image2" required />
+                      <input class="form-control form-control-lg" id="formFileLg3" type="file" id="owner_bnb_image3" name="owner_bnb_image3" required />
+                      <input class="form-control form-control-lg" id="formFileLg4" type="file" id="owner_bnb_image4" name="owner_bnb_image4" required />
+                      <input class="form-control form-control-lg" id="formFileLg5" type="file" id="owner_bnb_image5" name="owner_bnb_image5" required />
                     </div>
                   </div>
                   

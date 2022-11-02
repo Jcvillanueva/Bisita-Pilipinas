@@ -27,11 +27,25 @@
 		} else {
 			$hashed_password = md5($_POST['password']);
 			$sql = "
-				INSERT INTO users_owner (
+				INSERT INTO users (
+					username, 
+					email, 
+					password,
+					usertype
+				)
+				VALUES (
+					'{$_POST['owner_username']}', 
+					'{$_POST['owner_email']}', 
+					'{$hashed_password}',
+					'Owner'
+				)
+			";
+			$conn->query($sql);
+
+			$sql = "
+				INSERT INTO owners (
+					user_id,
 					owner_fullname,
-					owner_username,
-					password, 
-					owner_email, 
 					owner_bnb_name,
 					owner_bnb_address,
 					owner_bnb_desc,
@@ -43,14 +57,12 @@
 					owner_bnb_image2,
 					owner_bnb_image3,
 					owner_bnb_image4,
-					owner_bnb_image5
+					owner_bnb_image5,
+					usertype
 				)
 				VALUES (
-					
+					'{$conn->insert_id}',
 					'{$_POST['owner_fullname']}',
-					'{$_POST['owner_username']}',
-					'{$hashed_password}',
-					'{$_POST['owner_email']}',
 					'{$_POST['owner_bnb_name']}',
 					'{$_POST['owner_bnb_address']}',
 					'{$_POST['owner_bnb_desc']}',
@@ -62,7 +74,8 @@
 					'{$_FILES['owner_bnb_image2']['name']}',
 					'{$_FILES['owner_bnb_image3']['name']}',
 					'{$_FILES['owner_bnb_image4']['name']}',
-					'{$_FILES['owner_bnb_image5']['name']}'
+					'{$_FILES['owner_bnb_image5']['name']}',
+					'{$_POST['usertype']}'
 
 				)
 			";
