@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -33,44 +37,36 @@
              <span class="tooltip">Search</span>
           </li>
           <li>
-            <a href="homepage.html">
+            <a href="homepage.php">
               <i class='bx bx-grid-alt'></i>
-              <span class="links_name">BnB</span>
+              <span class="links_name">List of BnB</span>
             </a>
              <span class="tooltip">List of BnB</span>
           </li>
-          <li>
-           <a href="#">
-             <i class='bx bx-user' ></i>
-             <span class="links_name">Registered BnB</span>
-           </a>
-           <span class="tooltip">List of Registered BnB</span>
-         </li>
-
+        
          <li>
-           <a href="#">
+           <a href="AdminUserReports.php">
              <i class='bx bx-pie-chart-alt-2' ></i>
-             <span class="links_name">Analytics</span>
+             <span class="links_name">User Data</span>
            </a>
-           <span class="tooltip">Analytics</span>
+           <span class="tooltip">User Data</span>
          </li>
          <li>
-           <a href="#">
+           <a href="BnBValidationAdmin.php">
              <i class='bx bx-folder' ></i>
-             <span class="links_name">Acceptance</span>
+             <span class="links_name">BnB Application</span>
            </a>
-           <span class="tooltip">List of Acceptance</span>
+           <span class="tooltip">BnB Application</span>
          </li>
          
          <li class="profile">
              <div class="profile-details">
                <!--<img src="profile.jpg" alt="profileImg">-->
                <div class="name_job">
-                 <div class="name">Admin1</div>
-                 <div class="job">Admin</div>
+                 <div class="name"><?php echo $_SESSION['username']?></div>
                </div>
              </div>
-             <i class='bx bx-log-out' id="log_out" ></i>
+             <a class='bx bx-log-out' id="log_out" href="logout.php"></a>
          </li>
         </ul>
       </div>
@@ -85,7 +81,7 @@
                 die("Connection failed: " . mysqli_connect_error());
             }
 
-            $sql = "SELECT * FROM users_owner";
+            $sql = "SELECT owners.*, users.username, users.email FROM owners LEFT JOIN users ON users.id=owners.user_id";
             $result = mysqli_query($conn, $sql);
 
             if (mysqli_num_rows($result) > 0) {
@@ -112,19 +108,19 @@
                     <tr>
                       
                       <td>
-                        <a href="detail_view.php?id=<?php echo $row['owner_id']?>"><?php echo $row['owner_id']?></a>
+                        <a href="detail_view.php?id=<?php echo $row['id']?>"><?php echo $row['id']?></a>
                       </td>
 
                     <td> 
-                      <a href="detail_view.php?id=<?php echo $row['owner_id']?>"><?php echo $row['owner_fullname']?></a>
+                      <a href="detail_view.php?id=<?php echo $row['id']?>"><?php echo $row['owner_fullname']?></a>
                     </td> 
               
                     <td> 
-                    <?php echo $row['owner_username']?>
+                    <?php echo $row['username']?>
                     </td>
                   
                     <td> 
-                    <?php echo $row['owner_email']?>
+                    <?php echo $row['email']?>
                     </td>
                   
                     <td> 

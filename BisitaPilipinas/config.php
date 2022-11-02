@@ -2,8 +2,8 @@
 
 $servername = "localhost:3306";
 $username = "root";
-$password = "";
-$dbname = "bisita_pilipinas";
+$password = "sr^IFr3gLb==Xowx";
+$dbname = "bisita_pilipinas_database";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection

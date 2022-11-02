@@ -21,10 +21,10 @@
                     $_SESSION['usertype'] = $data['usertype'];
                     if($data['usertype']==='Admin'){
                         header("Location: AdminBnB.php");
-                    }else if($data['usertype']==='Tourist'){
+                    } else if($data['usertype']==='Tourist'){
                         header("Location: homepage.php");
-                    } else {
-                    header("Location: index.php?error=Invalid username or password!");
+                    } else if($data['usertype']==='Owner'){
+                        header("Location: homepage.php");
                     }
                 exit();
             } else {

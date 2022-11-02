@@ -9,7 +9,8 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $sql = "SELECT * FROM users_owner WHERE owner_id = " . $id;
+    $sql = "SELECT * FROM users LEFT JOIN owners ON owners.user_id = users.id WHERE owners.id = " . $id;
+
     $result = mysqli_query($conn, $sql);
 
     $owner = mysqli_fetch_array($result);
@@ -35,4 +36,22 @@
     echo "<br>";
     echo "<br>";
 
-    echo '<input type="submit", value="Approve"/>';
+
+    if(isset($_POST['submit'])) {
+        if ($_POST['is_accepted'] == "1") {
+            $sql = "UPDATE owners SET is_accepted = 1 WHERE id = " . $id;
+            mysqli_query($conn, $sql);  
+        }
+
+        header ("Location: BnBValidationAdmin.php");
+    }
+?>
+
+<form method="post">
+    <input type="radio" id="Accept" name="is_accepted" value="1" required>
+    <label for="Accept">Accept</label><br>
+    <input type="radio" id="Reject" name="is_accepted" value="0" required>
+    <label for="Reject">Reject</label><br>
+    <input type="submit" name="submit" value="Submit" />
+</form>
+

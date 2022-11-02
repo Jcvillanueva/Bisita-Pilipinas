@@ -1,3 +1,18 @@
+<?php
+session_start();
+?>
+
+<?php
+  require ('config.php');
+  $conn = new mysqli($servername, $username, $password, $dbname);
+  // Check connection
+  if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+  }
+  $sql = "SELECT owners.*, users.username, users.email FROM owners LEFT JOIN users ON users.id=owners.user_id WHERE owners.is_accepted=1";
+  $result = mysqli_query($conn, $sql);
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,6 +26,16 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+
+      <!-- Shadowbox -->
+      <link rel="stylesheet" href="src/shadowbox.css">
+        <script src="src/jquery.js"></script>
+        <script src="src/jquery-migrate.min.js"></script>
+        <script src="src/shadowbox.js"></script>
+        <script>
+		      Shadowbox.init();
+        </script>
+
       <!-- Javascripts -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
       <!-- Javascripts end -->
@@ -33,110 +58,140 @@
              <span class="tooltip">Search</span>
           </li>
           <li>
-            <a href="homepage.html">
+            <a href="homepage.php">
               <i class='bx bx-grid-alt'></i>
               <span class="links_name">List of BnB</span>
             </a>
              <span class="tooltip">List of BnB</span>
           </li>
-          <li>
-           <a href="#">
-             <i class='bx bx-user' ></i>
-             <span class="links_name">List of Registered BnB</span>
-           </a>
-           <span class="tooltip">List of Registered BnB</span>
-         </li>
          <li>
-           <a href="#">
-             <i class='bx bx-chat' ></i>
-             <span class="links_name">Messages</span>
+           <a href="TouristSpots.php">
+             <i class='bx bx-touristspot' ></i>
+             <span class="links_name">Tourist Spots</span>
            </a>
-           <span class="tooltip">Messages</span>
+           <span class="tooltip">Tourist Spots</span>
          </li>
          <li class="profile">
              <div class="profile-details">
                <!--<img src="profile.jpg" alt="profileImg">-->
                <div class="name_job">
-                 <div class="name">Tourist1</div>
-                 <div class="job">Tourist</div>
+                 <div class="name"> <?php echo $_SESSION['username']?> </div>
                </div>
              </div>
-             <i class='bx bx-log-out' id="log_out" ></i>
+             <a class='bx bx-log-out' id="log_out" href="logout.php" ></a>
          </li>
         </ul>
       </div>
       <!-- Home-section -->
       <section class="home-section">
-        <div class="col-sm-8">
-          <!-- House #1 -->
-          <h2>House 1</h2>
-          <h5>House Description</h5>
-          <div class="fakeimg">House Pictures here</div>
-          <br>
-          <h5>Description here</h5>
-          <p>Location Itsura ng bahay or kahit andito basta details ng bahay anditoo</p>
-          <!-- First Accordion house -->
-          <div class="accordion" id="accordionExample1">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  More details
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>Additional details dito ng BNB makikita yun sa nilagay mo sa pag book ng bnb nilaa so pakilagay nalang siya Dito</strong> 
+        <?php
+          while($row = mysqli_fetch_assoc($result)) {
+        ?>
+        <div class="row">
+          <div class="col-sm-12">
+            <!-- House #1 -->
+            <h2><?php echo $row['owner_bnb_name']; ?></h2>
+            <div class="fakeimg">
+
+                    <div class="homepage_row"> 
+                      <?php echo '<img src= "./images/'.$row['owner_bnb_image'].'" 
+                      style="width:192;height:144px;margin:3px;border: 2px solid #000000;float:left;margin:5px;"/>';  ?>
+
+                      <div class="homepageColumn"> 
+                        <?php echo '<img src= "./images/'.$row['owner_bnb_image2'].'" 
+                          style="width:192px;height:144px;margin:3px;border: 2px solid #000000;float:left;margin:5px;"/>';  ?>
+                      </div>
+
+                      <div class="homepageColumn"> 
+                        <?php echo '<img src= "./images/'.$row['owner_bnb_image3'].'" 
+                          style="width:192px;height:144px;margin:3px;border: 2px solid #000000;float:left;margin:5px;"/>';  ?>
+                      </div>
+
+                      <div class="homepageColumn"> 
+                        <?php echo '<img src= "./images/'.$row['owner_bnb_image4'].'" 
+                          style="width:192px;height:144px;margin:3px;border: 2px solid #000000;float:left;margin:5px;"/>';  ?>
+                      </div>
+                      <div class="homepageColumn"> 
+                        <?php echo '<img src= "./images/'.$row['owner_bnb_image5'].'" 
+                          style="width:192px;height:144px;margin:3px;border: 2px solid #000000;float:left;margin:5px;"/>';  ?>
+                      </div>
+                      
+                    </div>
+                              
+                  </div>
+                        
+            <br>
+            <h5><?php echo $row['owner_bnb_desc']; ?> </h5>
+            <!-- First Accordion house -->
+            <div class="accordion" id="accordionExample1">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    More details
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>Contact Number: <?php echo $row['owner_contact_num']; ?> </strong><br> 
+                    <strong>Price Range: <?php echo $row['price_range_from']; ?> - <?php echo $row['price_range_to']; ?> </strong>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Location
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>So dito naman ang location ng bahay kahit naka embedded lang yung map oks na yun</strong> 
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Location
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong><?php echo $row['owner_bnb_address']; ?></strong> 
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Ratings 
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>in progress pa ren to pero magagawa ko na to agaad in no time</strong>
+              <!-- <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Ratings 
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>in progress pa ren to pero magagawa ko na to agaad in no time</strong>
+                  </div>
                 </div>
-              </div>
+              </div> -->
             </div>
-          </div>
-          <!-- First Accordion House End -->
-           <!-- House #1 End -->
-          <br>
-          <br>
-          <br>
-            <div class="pagination_section">
-              <nav aria-label="...">
-                <ul class="pagination">          
-                    <a class="page-link" href="homepage.html" tabindex="-1" aria-disabled="false">Previous</a>
-                  <li class="page-item active" aria-current="page">
-                    <a class="page-link" href="homepage.html">1</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="homeP2.html">2</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="homeP3.html">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="homeP2.html">Next</a>
-                  </li>
-                </ul>
-              </nav>
-             </div>
+            <!-- First Accordion House End -->
+            <!-- House #1 End -->
+            <!--
+            <br>
+            <br>
+            <br>
+              <div class="pagination_section">
+                <nav aria-label="...">
+                  <ul class="pagination">          
+                      <a class="page-link" href="homepage.html" tabindex="-1" aria-disabled="false">Previous</a>
+                    <li class="page-item active" aria-current="page">
+                      <a class="page-link" href="homepage.html">1</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="homeP2.html">2</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="homeP3.html">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="homeP2.html">Next</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div> 
+            -->
           </div> 
-        </div> 
+        </div>
+        <hr>
+        <?php
+          }
+        ?>
     </div>
     </section>
     <!-- Home-section end -->

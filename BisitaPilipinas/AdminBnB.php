@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,50 +33,36 @@
              <span class="tooltip">Search</span>
           </li>
           <li>
-            <a href="homepage.html">
+            <a href="homepage.php">
               <i class='bx bx-grid-alt'></i>
-              <span class="links_name">BnB</span>
+              <span class="links_name">List of BnB</span>
             </a>
              <span class="tooltip">List of BnB</span>
           </li>
-          <li>
-           <a href="#">
-             <i class='bx bx-user' ></i>
-             <span class="links_name">Registered BnB</span>
-           </a>
-           <span class="tooltip">List of Registered BnB</span>
-         </li>
-         <li>
-           <a href="#">
-             <i class='bx bx-chat' ></i>
-             <span class="links_name">Messages</span>
-           </a>
-           <span class="tooltip">Messages</span>
-         </li>
+       
          <li>
            <a href="AdminUserReports.php">
              <i class='bx bx-pie-chart-alt-2' ></i>
-             <span class="links_name">Analytics</span>
+             <span class="links_name">User Data</span>
            </a>
-           <span class="tooltip">Analytics</span>
+           <span class="tooltip">User Data</span>
          </li>
          <li>
            <a href="BnBValidationAdmin.php">
              <i class='bx bx-folder' ></i>
              <span class="links_name">BnB Application</span>
            </a>
-           <span class="tooltip">List of Acceptance</span>
+           <span class="tooltip">BnB Application</span>
          </li>
          
          <li class="profile">
              <div class="profile-details">
                <!--<img src="profile.jpg" alt="profileImg">-->
                <div class="name_job">
-                 <div class="name">Admin1</div>
-                 <div class="job">Admin</div>
+                 <div class="name"><?php echo $_SESSION['username']?></div>
                </div>
              </div>
-             <i class='bx bx-log-out' id="log_out" ></i>
+             <a class='bx bx-log-out' id="log_out" href="logout.php" ></a>
          </li>
         </ul>
       </div>
