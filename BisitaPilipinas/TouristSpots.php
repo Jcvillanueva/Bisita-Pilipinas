@@ -55,7 +55,7 @@ session_start();
           
          <li>
            <a href="TouristSpots.php">
-             <i class='bx bx-touristspot' ></i>
+           <i class='bx bx-landscape' ></i>
              <span class="links_name">Tourist Spots</span>
            </a>
            <span class="tooltip">Tourist Spots</span>

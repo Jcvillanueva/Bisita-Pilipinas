@@ -8,14 +8,14 @@
   </head>
  
   <body>
-<section class="vh-100" style="background-color: #508bfc;">
+<section class="vh-100" style="background-color: #11101D;">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
           <div class="card shadow-2-strong" style="border-radius: 1rem;">
             <div class="card-body p-5 text-center">
   
-              <h3 class="mb-5">Welcome to Bisita Pilipinas</h3>
+              <h3 class="mb-5" font-face="Poppins">Welcome to Bisita Carranglan</h3>
 
             <form method="POST" action="validation.php"> 
               
@@ -32,7 +32,7 @@
                      <?php } ?>
               </div>
 
-              <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>          
+              <button class="btn btn-primary btn-lg btn-block" type="submit" style="background-color: #11101D;">Login</button>          
 
               </form>
 
@@ -42,15 +42,15 @@
                 <label class="form-check-label" for="form1Example3"> Remember password </label>
               </div> --> <br>
   
-              <button onclick="myFunction2()" class="btn btn-primary btn-lg btn-block" type="submit">Sign-up</button><br>
+              <button onclick="myFunction2()" class="btn btn-primary btn-lg btn-block" type="submit" style="background-color: #11101D;">Sign-up</button><br>
 
               <hr class="my-4">
 
-              <button onclick="myFunction3()" class="btn btn-primary btn-lg btn-block" type="submit-owner">Sign-up as BnB Owner</button>
+              <button onclick="myFunction3()" class="btn btn-primary btn-lg btn-block" type="submit-owner" style="background-color: #11101D;">Sign-up as BnB Owner</button>
 
               <hr class="my-4">
 
-              <button onclick="myFunction()">Continue without an Account</button>
+              <button onclick="myFunction()" class="btn btn-primary btn-lg btn-block" style="background-color: #11101D;">Continue without an Account</button>
 
             </div>
           </div>
