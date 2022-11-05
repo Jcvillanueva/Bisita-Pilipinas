@@ -195,13 +195,13 @@ session_start();
         ?>
                 <nav aria-label="...">
                   <ul class="pagination">
-                    <li class="page-item">
+                    <li class="page-item disabled">
                       <a class="page-link" href="Tour_Spots_P2.php" style="color:#11101D;">Previous</a>
                     </li>
                     <li class="page-item active" aria-current="page">
-                    <a class="page-link" href="Tour_Spots.php" style="color: #fff; background-color:#11101D; border-color:#11101D;">1</a></li>
+                    <span class="page-link" href="Tour_Spots.php" style="color: #fff; background-color:#11101D; border-color:#11101D;">1</span></li>
                     <li class="page-item">
-                    <span class="page-link" href="Tour_Spots_P2.php" style="color: #11101D;">2</span>
+                    <a class="page-link" href="Tour_Spots_P2.php" style="color: #11101D;">2</a>
                     </li>
                     <li class="page-item" ><a class="page-link" href="Tour_Spots_p3.php" style="color: #11101D;">3</a></li>
                     <li class="page-item" ><a class="page-link" href="Tour_Spots_p4.php" style="color: #11101D;" >4</a></li>

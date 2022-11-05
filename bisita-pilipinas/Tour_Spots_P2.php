@@ -217,7 +217,7 @@ session_start();
                 <nav aria-label="...">
                   <ul class="pagination">
                     <li class="page-item">
-                      <a class="page-link" href="Tour_Spots_P2.php" style="color:#11101D;">Previous</a>
+                      <a class="page-link" href="Tour_Spots.php" style="color:#11101D;">Previous</a>
                     </li>
                     <li class="page-item">
                     <a class="page-link" href="Tour_Spots.php" style="color: #11101D;">1</a></li>
