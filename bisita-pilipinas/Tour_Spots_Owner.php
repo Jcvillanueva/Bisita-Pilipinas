@@ -200,7 +200,23 @@ session_start();
         <?php
           }
         ?>
-       
+                <nav aria-label="...">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="Tour_Spots_Owner.php" style="color:#11101D;">Previous</a>
+                    </li>
+                    <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="Tour_Spots.php" style="color: #fff; background-color:#11101D; border-color:#11101D;">1</a></li>
+                    <li class="page-item">
+                    <a class="page-link" href="Tour_Spots_Owner_p2.php" style="color: #11101D;">2</a>
+                    </li>
+                    <li class="page-item" ><a class="page-link" href="Tour_Spots_Owner_p3.php" style="color: #11101D;">3</a></li>
+                    <li class="page-item" ><a class="page-link" href="Tour_Spots_Owner_p4.php" style="color: #11101D;" >4</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="Tour_Spots_Owner_p2.php"style="color:#11101D;">Next</a>
+                    </li>
+                  </ul>
+                </nav>
         <!-- heading end -->
         </div>
         </section>
