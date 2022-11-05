@@ -90,37 +90,37 @@ session_start();
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="./images/calo.png" class="d-block w-100 h-100" alt="...">
+                <img src="./images/alohafallspt4.png" class="d-block w-100 h-100" alt="...">
                   <div class="carousel-caption d-none d-md-block">
-                      <h5>Calo Road,</h5>
+                  <h5>Aloha Falls,</h5>
                       <p>Carranglan Nueva Ecija</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                <img src="./images/calo2.png" class="d-block w-100" alt="...">
+                <img src="./images/alohafalls.png" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                      <h5>Calo Road,</h5>
+                <h5>Aloha Falls,</h5>
                       <p>Carranglan Nueva Ecija</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                <img src="./images/calopt3.png" class="d-block w-100" alt="...">
+                <img src="./images/alohafalls2.png" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                      <h5>Calo Road,</h5>
+                <h5>Aloha Falls,</h5>
                       <p>Carranglan Nueva Ecija</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                <img src="./images/calo2.png" class="d-block w-100" alt="...">
+                <img src="./images/alohafallspt.png" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                      <h5>Calo Road,</h5>
+                <h5>Aloha Falls,</h5>
                       <p>Carranglan Nueva Ecija</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                <img src="./images/calopt1.png" class="d-block w-100" alt="...">
+                <img src="./images/alohafallspt1.png" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                      <h5>Calo Road,</h5>
+                <h5>Aloha Falls,</h5>
                       <p>Carranglan Nueva Ecija</p>
                   </div>
             </div>
@@ -141,13 +141,13 @@ session_start();
 
                     <div class="row featurette">
                     <div class="col-md-7">
-                        <h2 class="featurette-heading fw-normal lh-1">Calo Road, Brgy Bunga, Carranglan Nueva Ecija</h2>
-                        <p class="lead">Calo, also known as the "Sea of Clouds" and "Calofornia," is a well-known tourist spot located in Sitio Calo, Brgy. Bunga Carranglan, Nueva Ecija, due to its breath-taking view. It is a perfect place to hike, camp, picnic, and do other adventurous and memorable things while witnessing their mountains turn into a sea of clouds and hearing relaxing birds' chirping in the surroundings.</p>
-                        <p class="lead">There are also a lot of  spots that you can share with your friends online. You can also try delicacies of Nueva Ecija and other Filipino dishes in different eateries, as well as purchase souvenirs and pasalubong for your family to make them try and taste food in Calo
+                        <h2 class="featurette-heading fw-normal lh-1">Aloha Falls, Carranglan Nueva Ecija</h2>
+                        <p class="lead">After climbing Mount 387, tourists can go directly to Aloha Falls to refresh and de-stress. </p>
+                        <p class="lead">The waterfalls in this spot is clear and powerful – a perfect area to enjot nature with your friends and family.</p>
                     </div>
                     <div class="col-md-5">
 
-                    <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=500&amp;height=500&amp;hl=en&amp;q=calo rd nueva&amp;t=k&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://formatjson.org/">format json</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:500px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:500px;}.gmap_iframe {height:500px!important;}</style></div>
+                    <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=500&amp;height=500&amp;hl=en&amp;q=aloha falls carranglan&amp;t=k&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://formatjson.org/">format json</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:500px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:500px;}.gmap_iframe {height:500px!important;}</style></div>
                     </div>
                     </div>
 
@@ -211,6 +211,7 @@ session_start();
                 </div>
                 <hr class="featurette-divider" style=" border-top:3px solid #000; border-radius: 5px;">
             </div>
+    
         <?php
           }
         ?>
@@ -221,11 +222,11 @@ session_start();
                     </li>
                     <li class="page-item">
                     <a class="page-link" href="Tour_Spots.php" style="color: #11101D;">1</a></li>
-                    <li class="page-item active" aria-current="page">
-                    <span class="page-link" href="Tour_Spots_P2.php" style="color: #fff; background-color:#11101D; border-color:#11101D;">2</span>
+                    <li class="page-item">
+                    <a class="page-link" href="Tour_Spots_P2.php" style="color:#11101D;">2</a>
                     </li>
-                    <li class="page-item" ><a class="page-link" href="Tour_Spots_p3.php" style="color: #11101D;">3</a></li>
-                    <li class="page-item" ><a class="page-link" href="Tour_Spots_p4.php" style="color: #11101D;" >4</a></li>
+                    <li class="page-item"><a class="page-link" href="Tour_Spots_p3.php" style="color:#11101D;">3</a></li>
+                    <li class="page-item active" aria-current="page"><span class="page-link" href="Tour_Spots_p4.php" style="color: #fff; background-color:#11101D; border-color:#11101D;">4</span></li>
                     <li class="page-item">
                       <a class="page-link" href="Tour_Spots_p3.php"style="color:#11101D;">Next</a>
                     </li>

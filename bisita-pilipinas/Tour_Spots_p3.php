@@ -224,22 +224,23 @@ session_start();
         <?php
           }
         ?>
-       <nav aria-label="...">
+            <nav aria-label="...">
                   <ul class="pagination">
                     <li class="page-item">
-                      <a class="page-link" href="Tour_Spots_P2.php">Previous</a>
+                      <a class="page-link" href="Tour_Spots_P2.php" style="color:#11101D;">Previous</a>
                     </li>
                     <li class="page-item">
-                    <a class="page-link" href="Tour_Spots.php">1</a></li>
-                    <li class="page-item" aria-current="page">
-                    <a class="page-link" href="Tour_Spots_P2.php" style>2</a>
-                    </li>
-                    <li class="page-item active"><span class="page-link" href="Tour_Spots_p3.php">3</span></li>
+                    <a class="page-link" href="Tour_Spots.php" style="color: #11101D;">1</a></li>
                     <li class="page-item">
-                      <a class="page-link" href="Tour_Spots_p3.php">Next</a>
+                    <a class="page-link" href="Tour_Spots_P2.php" style="color:#11101D;">2</a>
+                    </li>
+                    <li class="page-item active" aria-current="page"><span class="page-link" href="Tour_Spots_p3.php" style="color: #fff; background-color:#11101D; border-color:#11101D;">3</span></li>
+                    <li class="page-item " ><a class="page-link" href="Tour_Spots_p4.php" style="color: #11101D;" >4</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="Tour_Spots_p4.php"style="color:#11101D;">Next</a>
                     </li>
                   </ul>
-              </nav>
+                </nav>
         <!-- heading end -->
         </div>
         </section>
