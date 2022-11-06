@@ -93,43 +93,36 @@ session_start();
                 ?>
       <!-- Home-section -->
       <section class="home-section">
-      <div class="text"> Your BnB</div>
+      <h1 class="text"> Your BnB</h1>
+      <hr class="featurette-divider" style=" border-top:2px solid #000; border-radius: 15px;">
       <div class="container">
-      <div class="card mb-3" style="max-width: 720px; max-height:920px;">
+      <div class="card mb-8" style="max-width:1200px; ">
           <div class="row no-gutters">
-            <div class="col-md-3">
-            <?php echo '<img src= "./images/'.$row['owner_bnb_image'].'" 
+            <div class="col-md-12">
+            <?php echo '<img src= "./images/'.$row['owner_bnb_image'].'" class="card-img" 
+           style="width:192px; height:144px; margin:5px; border: 2px solid #000;"/>';  ?>
+           <?php echo '<img src= "./images/'.$row['owner_bnb_image2'].'" class="card-img" 
+           style="width:192px; height:144px; margin:5px; border: 2px solid #000;"/>';  ?>
+           <?php echo '<img src= "./images/'.$row['owner_bnb_image3'].'" class="card-img" 
+           style="width:192px; height:144px; margin:5px; border: 2px solid #000;"/>';  ?>
+           <?php echo '<img src= "./images/'.$row['owner_bnb_image4'].'" class="card-img" 
+           style="width:192px; height:144px; margin:5px; border: 2px solid #000;"/>';  ?>
+           <?php echo '<img src= "./images/'.$row['owner_bnb_image5'].'" class="card-img" 
            style="width:192px; height:144px; margin:5px; border: 2px solid #000;"/>';  ?>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-10">
               <div class="card-body">
-                <h5 class="card-title"><strong>Owner:</strong><?php echo $row['owner_bnb_name']; ?></h5>
-                <p class="card-text"><strong>Address:</strong><?php echo $row['owner_bnb_address'];?></p>
-                <p class="card-text"><strong>Description:</strong><?php echo $row['owner_bnb_desc'];?></p>
-                <p class="card-text"><strong>Contact Number:</strong><?php echo $row['owner_contact_num'];?></p>
-                <a href="#" class="btn btn-primary" style="color: #fff; background-color:#11101D; border-color:#11101D;">View Details</a>
-              </div>
-            </div>
-          </div>
-        </div>       
-        <div class="card mb-3" style="max-width: 720px; max-height:920px;">
-          <div class="row no-gutters">
-            <div class="col-md-3">
-            <?php echo '<img src= "./images/'.$row['owner_bnb_image'].'" 
-           style="width:192px; height:144px; margin:5px; border: 2px solid #000;"/>';  ?>
-            </div>
-            <div class="col-md-9">
-              <div class="card-body">
-                <h5 class="card-title"><strong>Owner:</strong><?php echo $row['owner_bnb_name']; ?></h5>
-                <p class="card-text"><strong>Address:</strong><?php echo $row['owner_bnb_address'];?></p>
-                <p class="card-text"><strong>Description:</strong><?php echo $row['owner_bnb_desc'];?></p>
-                <p class="card-text"><strong>Contact Number:</strong><?php echo $row['owner_contact_num'];?></p>
+                <h5 class="card-title"><strong>Owner:</strong>&nbsp<?php echo $row['owner_bnb_name']; ?></h5>
+                <p class="card-text" style="margin-bottom: 2px;"><strong>Address:</strong>&nbsp<?php echo $row['owner_bnb_address'];?></p>
+                <p class="card-text" style="margin-bottom: 2px;"><strong>Description:&nbsp</strong><?php echo $row['owner_bnb_desc'];?></p>
+                <p class="card-text" style="margin-bottom: 2px;"><strong>Contact Number:</strong>&nbsp<?php echo $row['owner_contact_num'];?></p>
+                <p class="card-text" style="margin-bottom: 2px;"><strong>Email:</strong>&nbsp<?php echo $row['owner_contact_num'];?></p>
                 <a href="#" class="btn btn-primary" style="color: #fff; background-color:#11101D; border-color:#11101D;">View Details</a>
               </div>
             </div>
           </div>
         </div>
-       
+        <br>
     </div> 
 
         <?php

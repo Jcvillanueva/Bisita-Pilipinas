@@ -24,7 +24,7 @@
                     } else if($data['usertype']==='Tourist'){
                         header("Location: Tour_Spots.php");
                     } else if($data['usertype']==='Owner'){
-                        header("Location: OwnerBnbhomepage.php");
+                        header("Location: OwnerBnBhomepage.php");
                     }
                 exit();
             } else {
