@@ -98,15 +98,31 @@ session_start();
         <div class="carousel-inner">
             <div class="carousel-item active">
             <img src="./images/mount387pt1.png" class="d-block w-100 h-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                      <h5>Mount 387,</h5>
+                      <p>Carranglan Nueva Ecija</p>
+                  </div>
             </div>
             <div class="carousel-item">
             <img src="./images/mount387pt2.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                      <h5>Mount 387,</h5>
+                      <p>Carranglan Nueva Ecija</p>
+                  </div>
             </div>
             <div class="carousel-item">
             <img src="./images/mount387pt3.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                      <h5>Mount 387</h5>
+                      <p>Carranglan Nueva Ecija</p>
+                  </div>
             </div>
             <div class="carousel-item">
             <img src="./images/mount387pt4.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                      <h5>Mount 387</h5>
+                      <p>Carranglan Nueva Ecija</p>
+                  </div>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -206,7 +222,7 @@ session_start();
                       <a class="page-link" href="Tour_Spots_Owner.php" style="color:#11101D;">Previous</a>
                     </li>
                     <li class="page-item active" aria-current="page">
-                    <a class="page-link" href="Tour_Spots.php" style="color: #fff; background-color:#11101D; border-color:#11101D;">1</a></li>
+                    <a class="page-link" href="Tour_Spots_Owner.php" style="color: #fff; background-color:#11101D; border-color:#11101D;">1</a></li>
                     <li class="page-item">
                     <a class="page-link" href="Tour_Spots_Owner_p2.php" style="color: #11101D;">2</a>
                     </li>
