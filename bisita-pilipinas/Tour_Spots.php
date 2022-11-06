@@ -91,15 +91,31 @@ session_start();
         <div class="carousel-inner">
             <div class="carousel-item active">
             <img src="./images/mount387pt1.png" class="d-block w-100 " alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                      <h5>Mount 387,</h5>
+                      <p>Carranglan Nueva Ecija</p>
+                  </div>
             </div>
             <div class="carousel-item">
             <img src="./images/mount387pt2.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                      <h5>Mount 387</h5>
+                      <p>Carranglan Nueva Ecija</p>
+                  </div>
             </div>
             <div class="carousel-item">
             <img src="./images/mount387pt3.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                      <h5>Mount 387</h5>
+                      <p>Carranglan Nueva Ecija</p>
+                  </div>
             </div>
             <div class="carousel-item">
             <img src="./images/mount387pt4.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                      <h5>Mount 387</h5>
+                      <p>Carranglan Nueva Ecija</p>
+                  </div>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
