@@ -58,7 +58,7 @@ session_start();
              <span class="tooltip">Search</span>
           </li> 
          <li>
-           <a href="Tour_Spots.php">
+           <a href="Tour_Spots_p4.php">
            <i class='bx bx-building-house'></i>
              <span class="links_name">Tourist Spots</span>
            </a>

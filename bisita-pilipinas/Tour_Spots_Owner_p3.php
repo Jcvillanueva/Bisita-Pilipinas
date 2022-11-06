@@ -65,7 +65,7 @@ session_start();
              <span class="tooltip">List of BnB</span>
           </li> 
          <li>
-           <a href="TouristSpots.php">
+           <a href="Tour_Spots_Owner_p3.php">
            <i class='bx bx-building-house'></i>
              <span class="links_name">Tourist Spots</span>
            </a>
