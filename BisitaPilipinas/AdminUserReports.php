@@ -36,6 +36,14 @@ session_start();
              <input type="text" placeholder="Search...">
              <span class="tooltip">Search</span>
           </li>
+          <li>
+            <a href="homepage.php">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">List of BnB</span>
+            </a>
+             <span class="tooltip">List of BnB</span>
+          </li>
+    
          <li>
            <a href="AdminUserReports.php">
              <i class='bx bx-pie-chart-alt-2' ></i>
@@ -64,15 +72,6 @@ session_start();
         </ul>
       </div>
       <section class="home-section">
-
-      <form method="post" action="export.php"
-            text-align="center">
-            <input type="submit" name="export"
-                value="Generate Report"
-                class="btn btn-success" />
-        </form>
-
-        <div class="container">
         <h1>User Reports (Tourists)</h1>
 
         <?php require ('config.php');
@@ -86,24 +85,46 @@ session_start();
             $sql = "SELECT * FROM users WHERE email is not null";
             $result = mysqli_query($conn, $sql);
 
+            if (mysqli_num_rows($result) > 0) {
+                // output data of each row
+            echo "<table border = 2 ";
+            echo "<thead>";
+                echo"<tr>
+                <th> User ID </th>
+                <th> Username </th>
+                <th> Email </th>
+                <th> User Type </th>
             
+                </tr>";
                 
             
                 while($row = mysqli_fetch_assoc($result)) {
             ?>
-            <div class="card mb-2 rounded" style="max-width: 32rem; padding-right:5px; border: 2px solid #000">
-            <div class="card-body" >
-              <h5 class="card-title">Usertype:&nbsp<?php echo $row['usertype']?></h5>
-              <h6 class="card-subtitle mb-2 text-muted">Username:&nbsp<?php echo $row['username']?></h6>
-              <p class="card-text">Email:&nbsp<?php echo $row['email']?></p>
-              <p class="card-text">ID:&nbsp<?php echo $row['id']?></p>
-              
-            </div>
-          </div>
-          <br>       
+                    <tr>
+
+                    <td>
+                    <?php echo $row['id']?>
+                  </td>
+                  
+                  <td> 
+                    <?php echo $row['username']?>
+                  </td>
+                  
+                  <td> 
+                    <?php echo $row['email']?>
+                  </td>
+                    
+                    <td>
+                    <?php echo $row['usertype']?>
+                  </td>
+                           
+                    </tr>
+                    </div>
+                    
               <?php
               
                 }
+            }
         ?>
       </section>
 

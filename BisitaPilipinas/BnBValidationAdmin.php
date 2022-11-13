@@ -35,7 +35,15 @@ session_start();
               <i class='bx bx-search' ></i>
              <input type="text" placeholder="Search...">
              <span class="tooltip">Search</span>
-          </li>    
+          </li>
+          <li>
+            <a href="homepage.php">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">List of BnB</span>
+            </a>
+             <span class="tooltip">List of BnB</span>
+          </li>
+        
          <li>
            <a href="AdminUserReports.php">
              <i class='bx bx-pie-chart-alt-2' ></i>
@@ -65,13 +73,6 @@ session_start();
       <section class="home-section">
         <h1>BnB Owner Applications</h1>
 
-        <form method="post" action="exportBnB.php"
-            text-align="center">
-            <input type="submit" name="export"
-                value="Generate Report"
-                class="btn btn-success" />
-        </form> <br>
-
         <?php require ('config.php');
         
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -85,34 +86,71 @@ session_start();
 
             if (mysqli_num_rows($result) > 0) {
                 // output data of each row
-        
+            echo "<table border = 2 ";
+            echo "<thead>";
+                echo"<tr>
+                <th> Owner ID </th>
+                <th> Fullname </th>
+                <th> Username </th>
+                <th> Email </th>
+                <th> BnB Name </th>
+                <th> BnB Address </th>
+                <th> BnB Description </th>
+                <th> Contact No. </th>
+                <th> Price Range From </th>
+                <th> Price Range To </th>
+            
+                </tr>";
+                
             
                 while($row = mysqli_fetch_assoc($result)) {
             ?>
-            <div class="card mb-" style="max-width: 720px; border: 2px solid #000">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                <?php echo '<img src= "./images/'.$row['owner_valid_id'].'" 
-                    style="width:192;height:144px;margin:5px;border: 2px solid #000000;float:left;"/>'; ?>
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                  <a href="detail_view.php?id=<?php echo $row['id']?>">Full Name:&nbsp<?php echo $row['owner_fullname']?></a>
-                  <br>
-                    <a href="detail_view.php?id=<?php echo $row['id']?>">ID:&nbsp<?php echo $row['id']?></a>
-                    <p class="card-text">Username:&nbsp<?php echo $row['username']?></p>
-                    <p class="card-text">Email:&nbsp<?php echo $row['email']?></p>
-                    <p class="card-text">BnB Address:&nbsp<?php echo $row['owner_bnb_address']?></p>
-                    <p class="card-text">BnB Description:&nbsp<?php echo $row['owner_bnb_desc']?></p>
-                    <p class="card-text">Contact Number:&nbsp<?php echo $row['owner_contact_num']?></p>
-                    <p class="card-text"><small class="text-muted">Price: <?php echo $row['price_range_from']?> to <?php echo $row['price_range_to']?></small></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br>
-            <br>      
+                    <tr>
+                      
+                      <td>
+                        <a href="detail_view.php?id=<?php echo $row['id']?>"><?php echo $row['id']?></a>
+                      </td>
+
+                    <td> 
+                      <a href="detail_view.php?id=<?php echo $row['id']?>"><?php echo $row['owner_fullname']?></a>
+                    </td> 
+              
+                    <td> 
+                    <?php echo $row['username']?>
+                    </td>
                   
+                    <td> 
+                    <?php echo $row['email']?>
+                    </td>
+                  
+                    <td> 
+                    <?php echo $row['owner_bnb_name']?>
+                    </td>
+                  
+                    <td> 
+                    <?php echo $row['owner_bnb_address']?>
+                    </td>
+                    
+                    <td> 
+                    <?php echo $row['owner_bnb_desc']?>
+                    </td>
+                    
+                    <td> 
+                    <?php echo $row['owner_contact_num']?>
+                   </td>
+                    
+                    <td> 
+                    <?php echo $row['price_range_from']?>
+                    </td>
+                    
+                    <td>
+                    <?php echo $row['price_range_to']?>
+                    </td>
+          
+          
+                    </tr>
+                    </div>
+                    
               <?php
               
                 }

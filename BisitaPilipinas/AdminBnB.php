@@ -32,6 +32,14 @@ session_start();
              <input type="text" placeholder="Search...">
              <span class="tooltip">Search</span>
           </li>
+          <li>
+            <a href="homepage.php">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">List of BnB</span>
+            </a>
+             <span class="tooltip">List of BnB</span>
+          </li>
+       
          <li>
            <a href="AdminUserReports.php">
              <i class='bx bx-pie-chart-alt-2' ></i>

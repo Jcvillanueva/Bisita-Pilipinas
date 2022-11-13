@@ -57,9 +57,16 @@ session_start();
              <input type="text" placeholder="Search...">
              <span class="tooltip">Search</span>
           </li>
+          <li>
+            <a href="homepage.php">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">List of BnB</span>
+            </a>
+             <span class="tooltip">List of BnB</span>
+          </li>
          <li>
-           <a href="Tour_Spots.php">
-           <i class='bx bx-building-house'></i>
+           <a href="TouristSpots.php">
+             <i class='bx bx-touristspot' ></i>
              <span class="links_name">Tourist Spots</span>
            </a>
            <span class="tooltip">Tourist Spots</span>
@@ -81,32 +88,32 @@ session_start();
           while($row = mysqli_fetch_assoc($result)) {
         ?>
         <div class="row">
-          <div class="col-sm-8">
+          <div class="col-sm-12">
             <!-- House #1 -->
             <h2><?php echo $row['owner_bnb_name']; ?></h2>
-            <div class="fakeimg" style="height:200px;">
+            <div class="fakeimg">
 
                     <div class="homepage_row"> 
                       <?php echo '<img src= "./images/'.$row['owner_bnb_image'].'" 
-                         style="width:192;height:144px;margin:5px;border: 2px solid #000000;float:left;"/>';  ?>
+                      style="width:192;height:144px;margin:3px;border: 2px solid #000000;float:left;margin:5px;"/>';  ?>
 
                       <div class="homepageColumn"> 
                         <?php echo '<img src= "./images/'.$row['owner_bnb_image2'].'" 
-                          style="width:192px;height:144px;margin:5px;border: 2px solid #000000;float:left;"/>';  ?>
+                          style="width:192px;height:144px;margin:3px;border: 2px solid #000000;float:left;margin:5px;"/>';  ?>
                       </div>
 
                       <div class="homepageColumn"> 
                         <?php echo '<img src= "./images/'.$row['owner_bnb_image3'].'" 
-                          style="width:192px;height:144px;margin:5px;border: 2px solid #000000;float:left;"/>';  ?>
+                          style="width:192px;height:144px;margin:3px;border: 2px solid #000000;float:left;margin:5px;"/>';  ?>
                       </div>
 
                       <div class="homepageColumn"> 
                         <?php echo '<img src= "./images/'.$row['owner_bnb_image4'].'" 
-                          style="width:192px;height:144px;margin:5px;border: 2px solid #000000;float:left;"/>';  ?>
+                          style="width:192px;height:144px;margin:3px;border: 2px solid #000000;float:left;margin:5px;"/>';  ?>
                       </div>
                       <div class="homepageColumn"> 
                         <?php echo '<img src= "./images/'.$row['owner_bnb_image5'].'" 
-                          style="width:192px;height:144px;margin:5px;border: 2px solid #000000;float:left;"/>';  ?>
+                          style="width:192px;height:144px;margin:3px;border: 2px solid #000000;float:left;margin:5px;"/>';  ?>
                       </div>
                       
                     </div>

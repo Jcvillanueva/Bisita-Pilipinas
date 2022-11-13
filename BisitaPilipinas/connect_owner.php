@@ -42,8 +42,6 @@
 			";
 			$conn->query($sql);
 
-
-
 			$sql = "
 				INSERT INTO owners (
 					user_id,
@@ -72,11 +70,11 @@
 					'{$_POST['price_range_from']}',
 					'{$_POST['price_range_to']}',
 					'{$_FILES['owner_valid_id']['name']}',
-					'{$_FILES ['owner_bnb_image']['name']}',
-					'{$_FILES ['owner_bnb_image2']['name']}',
-					'{$_FILES ['owner_bnb_image3']['name']}',
-					'{$_FILES ['owner_bnb_image4']['name']}',
-					'{$_FILES ['owner_bnb_image5']['name']}',
+					'{$_FILES['owner_bnb_image']['name']}',
+					'{$_FILES['owner_bnb_image2']['name']}',
+					'{$_FILES['owner_bnb_image3']['name']}',
+					'{$_FILES['owner_bnb_image4']['name']}',
+					'{$_FILES['owner_bnb_image5']['name']}',
 					'{$_POST['usertype']}'
 
 				)
