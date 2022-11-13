@@ -229,7 +229,7 @@
 }
 .home-section{
   position: relative;
-  background: #E4E9F7;
+  background: #fff;
   min-height: 100vh;
   top: 0;
   left: 78px;
@@ -260,14 +260,16 @@
   background: #aaa;
 }
 
-.home-section{
-  padding-left: 25px;
-  padding-top: 10px;
+.home-section {
+  padding: 15px;
+  width: 100%;
+  height: 100%;
 }
-.home-section .col-sm-8{
+.home-section .container{
   margin: 25px 50px 75px ;
   margin-right: 10%;
   position: absolute;
+ 
 }
 
 .col-sm-8 #accordionExample1{
@@ -289,12 +291,17 @@
 .homepageColumn {
   float: left;
   padding: 15px;
-  margin:3px;
 }
 
 /* Clearfix (clear floats) */
-.homepage_row::after {
+.homepagerRow::after {
   content: "";
   clear: both;
   display: table;
 }
+
+.home-section .container .marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+

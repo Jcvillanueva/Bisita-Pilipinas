@@ -22,9 +22,9 @@
                     if($data['usertype']==='Admin'){
                         header("Location: AdminBnB.php");
                     } else if($data['usertype']==='Tourist'){
-                        header("Location: homepage.php");
+                        header("Location: Tour_Spots.php");
                     } else if($data['usertype']==='Owner'){
-                        header("Location: homepage.php");
+                        header("Location: OwnerBnBhomepage.php");
                     }
                 exit();
             } else {
